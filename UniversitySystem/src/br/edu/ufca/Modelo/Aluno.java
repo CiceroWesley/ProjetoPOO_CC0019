@@ -9,7 +9,7 @@ public class Aluno {
 	private boolean trancou = false;
 	//private ArrayList<Disciplina> cadeiras;
 	
-	Aluno(String nome, int matricula, int idade){
+	public Aluno(String nome, int matricula, int idade){
 		this.nome = nome;
 		this.matricula = matricula;
 		this.idade = idade;

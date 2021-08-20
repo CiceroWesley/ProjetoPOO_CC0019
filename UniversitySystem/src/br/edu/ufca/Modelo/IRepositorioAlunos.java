@@ -7,6 +7,8 @@ public interface IRepositorioAlunos {
 	
 	Aluno consultar(String nome);
 	
-	public void atualizar(String discenteNome, int matricula, int idade);
+	int existe(Aluno discente);
+	
+	public void atualizar(Aluno discente, String nome, int matricula, int idade);
 		
 }
