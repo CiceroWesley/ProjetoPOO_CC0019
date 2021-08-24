@@ -43,9 +43,6 @@ public class RepositorioAlunosArrayList implements IRepositorioAlunos {
 		discente.setNome(nome);
 		discente.setIdade(idade);
 		discente.setMatricula(matricula);
-		
-		
-		// tem que lançar exceção pra cima?
-		
+				
 	} 
 }

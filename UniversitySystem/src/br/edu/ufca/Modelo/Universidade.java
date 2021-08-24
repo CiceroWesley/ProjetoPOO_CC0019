@@ -5,5 +5,13 @@ public class Universidade {
 	private NegocioAluno discentes;
 	//private NegocioProfessor docentes;
 	
+	public Universidade() {
+		this.discentes = new NegocioAluno(new RepositorioAlunosArrayList());
+	}
 	
+	public void adicionarAluno(String nome,int matricula,int idade) {
+		//lançar exceções
+		Aluno dis = new Aluno(nome,matricula,idade);
+		discentes.adicionar(dis);
+	}
 }

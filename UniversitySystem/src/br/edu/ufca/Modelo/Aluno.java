@@ -6,13 +6,14 @@ public class Aluno {
 	private String nome;
 	private int matricula;
 	private int idade;
-	private boolean trancou = false;
+	private boolean trancou;
 	//private ArrayList<Disciplina> cadeiras;
 	
 	public Aluno(String nome, int matricula, int idade){
 		this.nome = nome;
 		this.matricula = matricula;
 		this.idade = idade;
+		this.trancou = false;
 	}
 
 	public String getNome() {
