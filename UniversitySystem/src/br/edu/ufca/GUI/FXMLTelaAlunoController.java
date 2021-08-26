@@ -5,26 +5,20 @@
  */
 package br.edu.ufca.GUI;
 
-import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.stage.Modality;
 import javafx.stage.Stage;
-import javafx.stage.StageStyle;
 
 /**
  *
  * @author wesley
  */
-public class FXMLTelaPrincipalController implements Initializable {
+public class FXMLTelaAlunoController implements Initializable {
     
     @FXML
     private Button button;
@@ -37,17 +31,11 @@ public class FXMLTelaPrincipalController implements Initializable {
         System.out.println("You clicked me!");
     }
     @FXML
-    private void abrirTelaAluno(ActionEvent event) throws IOException {
-        Stage stage = (Stage) butaoAluno.getScene().getWindow();
-        //stage.close();
-       
-       FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("FXMLTelaAluno.fxml"));
-       Parent root1 = (Parent) fxmlLoader.load();
-      // Stage stage = new Stage();
-       stage.setScene(new Scene(root1));
-       stage.show();
+    private void abrirTelaAluno(ActionEvent event) {
+        
+        
+        
     }
-    
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
