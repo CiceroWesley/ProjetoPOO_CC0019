@@ -51,12 +51,25 @@ public class FXMLTelaAlunoController implements Initializable {
     void voltarMenu(ActionEvent event) throws IOException {
         Stage stage = (Stage) botaoVoltar.getScene().getWindow();
         //stage.close();
-       
+       /*
        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("FXMLTelaPrincipal.fxml"));
        Parent root1 = (Parent) fxmlLoader.load();
       // Stage stage = new Stage();
        stage.setScene(new Scene(root1));
        stage.show();
+       */
+       FXMLLoader fxmlLoader = new FXMLLoader();
+       fxmlLoader.setLocation(getClass().getResource("FXMLTelaPrincipal.fxml"));
+        /* 
+         * if "fx:controller" is not set in fxml
+         * fxmlLoader.setController(NewWindowController);
+         */
+        Scene scene = new Scene(fxmlLoader.load());
+        //Stage stage = new Stage();
+        stage.setTitle("Sistema Universitario");
+        stage.setScene(scene);
+        stage.show();
+       
     }
     
     @Override

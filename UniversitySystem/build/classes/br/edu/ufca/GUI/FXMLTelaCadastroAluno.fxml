@@ -9,7 +9,7 @@
     <children>
       <Text layoutX="130.0" layoutY="26.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sistema Universitario" />
       <Text layoutX="153.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cadastrar aluno" />
-      <Button fx:id="botaoVoltar" layoutX="171.0" layoutY="260.0" onAction="#voltarMenu" text="Voltar" />
+      <Button fx:id="botaoVoltar" layoutX="171.0" layoutY="260.0" onAction="#voltarAluno" text="Voltar" />
       <Text layoutX="14.0" layoutY="95.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nome:" />
       <TextField layoutX="14.0" layoutY="98.0" />
       <Text layoutX="14.0" layoutY="147.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Matricula:" />
