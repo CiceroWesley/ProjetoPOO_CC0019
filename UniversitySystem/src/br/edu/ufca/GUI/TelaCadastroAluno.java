@@ -15,15 +15,11 @@ import javafx.stage.Stage;
  *
  * @author wesley
  */
-public class TelaPrincipal extends Application {
-    //private Tela
-    public TelaPrincipal(){
-        
-    }
+public class TelaCadastroAluno extends Application {
     
     @Override
     public void start(Stage stage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("FXMLTelaPrincipal.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("FXMLTelaAluno.fxml"));
         
         Scene scene = new Scene(root);
         

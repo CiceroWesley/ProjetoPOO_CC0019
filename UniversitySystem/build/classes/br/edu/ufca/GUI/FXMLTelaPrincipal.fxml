@@ -7,7 +7,7 @@
 <AnchorPane id="AnchorPane" prefHeight="300.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.edu.ufca.GUI.FXMLTelaPrincipalController">
     <children>
         <Button fx:id="button" layoutX="55.0" layoutY="150.0" onAction="#handleButtonAction" text="Professor" />
-      <Button fx:id="butaoAluno" layoutX="290.0" layoutY="150.0" onAction="#abrirTelaAluno" text="Aluno" />
+      <Button fx:id="botaoAluno" layoutX="290.0" layoutY="150.0" onAction="#abrirTelaAluno" text="Aluno" />
       <Text layoutX="130.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sistema Universitario" />
     </children>
 </AnchorPane>

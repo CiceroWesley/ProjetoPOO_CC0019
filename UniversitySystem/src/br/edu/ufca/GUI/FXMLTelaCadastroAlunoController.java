@@ -22,34 +22,28 @@ import javafx.stage.Stage;
  *
  * @author wesley
  */
-public class FXMLTelaAlunoController implements Initializable {
+public class FXMLTelaCadastroAlunoController implements Initializable {
+    
+      @FXML
+    private Button butaoAluno;
+
     @FXML
-    private Button botaoCadastrar;
+    private Button butaoAluno1;
+
+    @FXML
+    private Button butaoAluno11;
 
     @FXML
     private Button botaoVoltar;
 
     @FXML
-    void cadastrarPerfil(ActionEvent event) throws IOException {
-        Stage stage = (Stage) botaoCadastrar.getScene().getWindow();
-        stage.close();
-        
-        FXMLLoader fxmlLoader = new FXMLLoader();
-        fxmlLoader.setLocation(getClass().getResource("FXMLTelaCadastroAluno.fxml"));
-        /* 
-         * if "fx:controller" is not set in fxml
-         * fxmlLoader.setController(NewWindowController);
-         */
-        Scene scene = new Scene(fxmlLoader.load());
-        Stage stage1 = new Stage();
-        stage1.setTitle("Cadastrar perfil");
-        stage1.setScene(scene);
-        stage1.show();
+    void abrirTelaAluno(ActionEvent event) {
+
     }
- 
+
     @FXML
     void voltarMenu(ActionEvent event) throws IOException {
-        Stage stage = (Stage) botaoVoltar.getScene().getWindow();
+        Stage stage = (Stage) butaoAluno.getScene().getWindow();
         //stage.close();
        
        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("FXMLTelaPrincipal.fxml"));

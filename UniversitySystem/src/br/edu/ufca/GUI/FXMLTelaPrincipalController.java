@@ -30,7 +30,7 @@ public class FXMLTelaPrincipalController implements Initializable {
     private Button button;
 
     @FXML
-    private Button butaoAluno;
+    private Button botaoAluno;
     
     @FXML
     private void handleButtonAction(ActionEvent event) {
@@ -38,14 +38,20 @@ public class FXMLTelaPrincipalController implements Initializable {
     }
     @FXML
     private void abrirTelaAluno(ActionEvent event) throws IOException {
-        Stage stage = (Stage) butaoAluno.getScene().getWindow();
+        Stage stage = (Stage) botaoAluno.getScene().getWindow();
         //stage.close();
-       
-       FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("FXMLTelaAluno.fxml"));
-       Parent root1 = (Parent) fxmlLoader.load();
-      // Stage stage = new Stage();
-       stage.setScene(new Scene(root1));
-       stage.show();
+        
+        FXMLLoader fxmlLoader = new FXMLLoader();
+        fxmlLoader.setLocation(getClass().getResource("FXMLTelaAluno.fxml"));
+        /* 
+         * if "fx:controller" is not set in fxml
+         * fxmlLoader.setController(NewWindowController);
+         */
+        Scene scene = new Scene(fxmlLoader.load());
+        //Stage stage = new Stage();
+        stage.setTitle("Sistema Universitario");
+        stage.setScene(scene);
+        stage.show();
     }
     
     
