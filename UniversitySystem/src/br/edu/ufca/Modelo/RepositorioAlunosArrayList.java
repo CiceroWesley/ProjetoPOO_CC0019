@@ -5,6 +5,10 @@ import java.util.ArrayList;
 public class RepositorioAlunosArrayList implements IRepositorioAlunos {
 	
 	private ArrayList<Aluno> array;
+        
+        public RepositorioAlunosArrayList(){
+            this.array = new ArrayList<Aluno>();
+        }
 	
 	@Override
 	public void adicionar(Aluno discente) {
@@ -30,11 +34,20 @@ public class RepositorioAlunosArrayList implements IRepositorioAlunos {
 	
 	@Override
 	public int existe(Aluno discente) {
-		int indice = array.indexOf(discente);
+            int indice = -1;
+            for(int i = 0; i < array.size();i++){
+                if(discente.getNome().equals(array.get(i).getNome()))
+                    indice = 0;
+            }
+            
+		//int indice = array.indexOf(discente);
 		if(indice == -1) {
-			return 0;
+                    //System.out.println("Nao existe");
+                    return 0;
+                        
 		} else {
-			return 1;
+                    //System.out.println(" existe");
+                    return 1;
 		}
 	}
 

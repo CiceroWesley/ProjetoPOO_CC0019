@@ -11,16 +11,18 @@ public class NegocioAluno {
 	public void adicionar(Aluno discente) {
 		int existe = repositorio.existe(discente);
 		if(existe == 0) {
-			repositorio.adicionar(discente);
+                    repositorio.adicionar(discente);
+                    //System.out.println("AQUIIIII");
 		} else {
-			//lançar exceção ja existe
+                    //lançar exceção ja existe
+                    //System.out.println("ERRO");
 		}
 	}
 	
-	public void remover(Aluno discente) {
-		Aluno dis = repositorio.consultar(discente.getNome());
+	public void remover(String nome) {
+		Aluno dis = repositorio.consultar(nome);
 		if(dis != null) {
-			repositorio.remover(discente);
+			repositorio.remover(dis);
 		} else {
 			//conta nao existe exceção
 		}

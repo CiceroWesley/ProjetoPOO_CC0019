@@ -5,6 +5,7 @@
  */
 package br.edu.ufca.GUI;
 
+import br.edu.ufca.Modelo.Universidade;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -23,12 +24,50 @@ import javafx.stage.Stage;
  * @author wesley
  */
 public class FXMLTelaAlunoController implements Initializable {
+    
+    @FXML
+    private Button botaoAtualizar;
+
     @FXML
     private Button botaoCadastrar;
 
     @FXML
+    private Button botaoRemover;
+
+    @FXML
     private Button botaoVoltar;
 
+    @FXML
+    private Button botaoConsultar;
+    
+    @FXML
+    void atualizarPerfil(ActionEvent event) {
+
+    }
+    
+    @FXML
+    void consultarPerfies(ActionEvent event) {
+
+    }
+
+    @FXML
+    void removerPerfil(ActionEvent event) throws IOException {
+        Stage stage = (Stage) botaoCadastrar.getScene().getWindow();
+        stage.close();
+        
+        FXMLLoader fxmlLoader = new FXMLLoader();
+        fxmlLoader.setLocation(getClass().getResource("FXMLTelaRemoverAluno.fxml"));
+        /* 
+         * if "fx:controller" is not set in fxml
+         * fxmlLoader.setController(NewWindowController);
+         */
+        Scene scene = new Scene(fxmlLoader.load());
+        Stage stage1 = new Stage();
+        stage1.setTitle("Remover aluno");
+        stage1.setScene(scene);
+        stage1.show();
+    }
+    
     @FXML
     void cadastrarPerfil(ActionEvent event) throws IOException {
         Stage stage = (Stage) botaoCadastrar.getScene().getWindow();

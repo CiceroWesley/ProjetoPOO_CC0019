@@ -14,4 +14,12 @@ public class Universidade {
 		Aluno dis = new Aluno(nome,matricula,idade);
 		discentes.adicionar(dis);
 	}
+        
+        public void trancarCurso(String nome){
+            discentes.trancar(nome);
+        }
+        
+        public void removerAluno(String nome){
+            discentes.remover(nome);
+        }
 }

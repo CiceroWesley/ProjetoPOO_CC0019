@@ -17,43 +17,45 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.stage.Modality;
+import javafx.scene.control.TextField;
 import javafx.stage.Stage;
-import javafx.stage.StageStyle;
 
 /**
  *
  * @author wesley
  */
-public class FXMLTelaPrincipalController implements Initializable {
-    
-    private static Universidade universidade = new Universidade();
-
-    /*
-    public FXMLTelaPrincipalController(Universidade fachada){
-        this.telacadastroaluno = new FXMLTelaCadastroAlunoController(fachada);
-    }
-    */
-    public Universidade getUniversidade(){
-        return universidade;
-    }
+public class FXMLTelaRemoverAlunoController implements Initializable {
+   
     @FXML
-    private Button button;
+    private Button botaoVoltar;
 
     @FXML
-    private Button botaoAluno;
-    
+    private TextField insereNome;
+
     @FXML
-    private void handleButtonAction(ActionEvent event) {
-        System.out.println("You clicked me!");
+    private Button botaoRemover;
+
+    @FXML
+    private Label labelResultado;
+
+    @FXML
+    void removerAluno(ActionEvent event) {
+        FXMLTelaPrincipalController telaPrincipal = new FXMLTelaPrincipalController();
+        Universidade universidade = telaPrincipal.getUniversidade();
+        String nome = insereNome.getText();
+        universidade.removerAluno(nome);
+        labelResultado.setText("Remoção realizada com sucesso");
     }
+
     @FXML
-    private void abrirTelaAluno(ActionEvent event) throws IOException {
-        Stage stage = (Stage) botaoAluno.getScene().getWindow();
+    void voltarAluno(ActionEvent event) throws IOException {
+        Stage stage = (Stage) botaoVoltar.getScene().getWindow();
         //stage.close();
-        
-        FXMLLoader fxmlLoader = new FXMLLoader();
-        fxmlLoader.setLocation(getClass().getResource("FXMLTelaAluno.fxml"));
+       
+       
+
+       FXMLLoader fxmlLoader = new FXMLLoader();
+       fxmlLoader.setLocation(getClass().getResource("FXMLTelaAluno.fxml"));
         /* 
          * if "fx:controller" is not set in fxml
          * fxmlLoader.setController(NewWindowController);
@@ -63,8 +65,11 @@ public class FXMLTelaPrincipalController implements Initializable {
         stage.setTitle("Sistema Universitario");
         stage.setScene(scene);
         stage.show();
+       
+       
+       
     }
-    
+
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {

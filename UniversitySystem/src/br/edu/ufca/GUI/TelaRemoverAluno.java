@@ -5,7 +5,6 @@
  */
 package br.edu.ufca.GUI;
 
-import br.edu.ufca.Modelo.Universidade;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -16,17 +15,11 @@ import javafx.stage.Stage;
  *
  * @author wesley
  */
-public class TelaPrincipal extends Application {
-    /*
-    private FXMLTelaCadastroAlunoController telacadastroaluno;
+public class TelaRemoverAluno extends Application {
     
-    public TelaPrincipal(Universidade fachada){
-        this.telacadastroaluno = new FXMLTelaCadastroAlunoController(fachada);
-    }
-    */
     @Override
     public void start(Stage stage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("FXMLTelaPrincipal.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("FXMLTelaAluno.fxml"));
         
         Scene scene = new Scene(root);
         
@@ -39,7 +32,6 @@ public class TelaPrincipal extends Application {
      */
     public static void main(String[] args) {
         launch(args);
-        
     }
     
 }

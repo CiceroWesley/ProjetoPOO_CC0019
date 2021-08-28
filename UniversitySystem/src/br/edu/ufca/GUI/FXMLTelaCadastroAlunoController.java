@@ -5,6 +5,7 @@
  */
 package br.edu.ufca.GUI;
 
+import br.edu.ufca.Modelo.Universidade;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -16,6 +17,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 /**
@@ -23,9 +25,35 @@ import javafx.stage.Stage;
  * @author wesley
  */
 public class FXMLTelaCadastroAlunoController implements Initializable {
-    
+       
     @FXML
     private Button botaoVoltar;
+
+    @FXML
+    private TextField insereNome;
+
+    @FXML
+    private TextField insereMatricula;
+
+    @FXML
+    private TextField insereIdade;
+
+    @FXML
+    private Button botaoCadastrar;
+    
+    @FXML
+    private Label labelResultado;
+
+    @FXML
+    void cadastrarAluno(ActionEvent event) {
+        FXMLTelaPrincipalController telaPrincipal = new FXMLTelaPrincipalController();
+        Universidade universidade = telaPrincipal.getUniversidade();
+        String nome = insereNome.getText();
+        int matricula =  Integer.parseInt(insereMatricula.getText());
+        int idade = Integer.parseInt(insereIdade.getText());
+        universidade.adicionarAluno(nome,matricula ,idade);
+        labelResultado.setText("Cadastro realizado com sucesso");
+    }
 
     @FXML
     void voltarAluno(ActionEvent event) throws IOException {
