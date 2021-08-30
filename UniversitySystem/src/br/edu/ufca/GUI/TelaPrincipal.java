@@ -17,6 +17,8 @@ import javafx.stage.Stage;
  * @author wesley
  */
 public class TelaPrincipal extends Application {
+    //private Universidade universidade;
+    
     /*
     private FXMLTelaCadastroAlunoController telacadastroaluno;
     
@@ -26,10 +28,15 @@ public class TelaPrincipal extends Application {
     */
     @Override
     public void start(Stage stage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("FXMLTelaPrincipal.fxml"));
+        Universidade universidade = new Universidade();
+        //Parent root = FXMLLoader.load(getClass().getResource("FXMLTelaPrincipal.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("FXMLTelaPrincipal.fxml"));
+        Parent root = loader.load();
+        //System.out.println(universidade);
+        FXMLTelaPrincipalController controller = loader.getController();
+        controller.setUniversidade(universidade);
         
         Scene scene = new Scene(root);
-        
         stage.setScene(scene);
         stage.show();
     }

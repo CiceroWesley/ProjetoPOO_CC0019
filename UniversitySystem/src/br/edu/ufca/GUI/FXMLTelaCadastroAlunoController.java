@@ -25,7 +25,7 @@ import javafx.stage.Stage;
  * @author wesley
  */
 public class FXMLTelaCadastroAlunoController implements Initializable {
-       
+    private Universidade universidade;
     @FXML
     private Button botaoVoltar;
 
@@ -46,12 +46,14 @@ public class FXMLTelaCadastroAlunoController implements Initializable {
 
     @FXML
     void cadastrarAluno(ActionEvent event) {
-        FXMLTelaPrincipalController telaPrincipal = new FXMLTelaPrincipalController();
-        Universidade universidade = telaPrincipal.getUniversidade();
+        //FXMLTelaPrincipalController telaPrincipal = new FXMLTelaPrincipalController();
+        //Universidade universidade = telaPrincipal.getUniversidade();
         String nome = insereNome.getText();
         int matricula =  Integer.parseInt(insereMatricula.getText());
         int idade = Integer.parseInt(insereIdade.getText());
-        universidade.adicionarAluno(nome,matricula ,idade);
+        System.out.println(universidade);
+        this.universidade.adicionarAluno(nome,matricula ,idade);
+        //System.out.println(universidade);
         labelResultado.setText("Cadastro realizado com sucesso");
     }
 
@@ -77,7 +79,9 @@ public class FXMLTelaCadastroAlunoController implements Initializable {
        
        
     }
-
+    public void setUniversidade(Universidade universidade) {
+        this.universidade = universidade;
+    }
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {

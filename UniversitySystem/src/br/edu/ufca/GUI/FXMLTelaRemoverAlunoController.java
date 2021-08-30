@@ -25,7 +25,7 @@ import javafx.stage.Stage;
  * @author wesley
  */
 public class FXMLTelaRemoverAlunoController implements Initializable {
-   
+    private Universidade universidade;
     @FXML
     private Button botaoVoltar;
 
@@ -41,9 +41,10 @@ public class FXMLTelaRemoverAlunoController implements Initializable {
     @FXML
     void removerAluno(ActionEvent event) {
         FXMLTelaPrincipalController telaPrincipal = new FXMLTelaPrincipalController();
-        Universidade universidade = telaPrincipal.getUniversidade();
+       // Universidade universidade = telaPrincipal.getUniversidade();
         String nome = insereNome.getText();
-        universidade.removerAluno(nome);
+        System.out.println(universidade);
+        this.universidade.removerAluno(nome);
         labelResultado.setText("Remoção realizada com sucesso");
     }
 
@@ -55,7 +56,7 @@ public class FXMLTelaRemoverAlunoController implements Initializable {
        
 
        FXMLLoader fxmlLoader = new FXMLLoader();
-       fxmlLoader.setLocation(getClass().getResource("FXMLTelaAluno.fxml"));
+       fxmlLoader.setLocation(getClass().getResource("FXMLTelaProfessor.fxml"));
         /* 
          * if "fx:controller" is not set in fxml
          * fxmlLoader.setController(NewWindowController);
@@ -69,7 +70,9 @@ public class FXMLTelaRemoverAlunoController implements Initializable {
        
        
     }
-
+    public void setUniversidade(Universidade universidade) {
+        this.universidade = universidade;
+    }
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {

@@ -6,12 +6,9 @@
 
 <AnchorPane id="AnchorPane" prefHeight="300.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.edu.ufca.GUI.FXMLTelaAlunoController">
     <children>
-      <Button fx:id="botaoAtualizar" layoutX="216.0" layoutY="124.0" onAction="#atualizarPerfil" text="Atualizar" />
       <Text layoutX="130.0" layoutY="26.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sistema Universitario" />
       <Button fx:id="botaoCadastrar" layoutX="14.0" layoutY="124.0" onAction="#cadastrarPerfil" prefHeight="26.0" prefWidth="95.0" text="Cadastrar" />
       <Text layoutX="153.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Menu discente" />
-      <Button fx:id="botaoRemover" layoutX="120.0" layoutY="124.0" onAction="#removerPerfil" text="Remover " />
       <Button fx:id="botaoVoltar" layoutX="172.0" layoutY="273.0" onAction="#voltarMenu" text="Voltar" />
-      <Button fx:id="botaoConsultar" layoutX="305.0" layoutY="124.0" onAction="#consultarPerfies" text="Consultar" />
     </children>
 </AnchorPane>

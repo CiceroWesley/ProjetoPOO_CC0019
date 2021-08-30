@@ -23,46 +23,64 @@ import javafx.stage.Stage;
  *
  * @author wesley
  */
-public class FXMLTelaAlunoController implements Initializable {
+public class FXMLTelaProfessorController implements Initializable {
     private Universidade universidade;
   
     @FXML
-    private Button botaoCadastrar;
+    private Button botaoAtualizar;
+
+    @FXML
+    private Button botaoRemover;
 
     @FXML
     private Button botaoVoltar;
-    
+
+    @FXML
+    private Button botaoConsultar;
+
     
     @FXML
-    void cadastrarPerfil(ActionEvent event) throws IOException {
-        Stage stage = (Stage) botaoCadastrar.getScene().getWindow();
+    void atualizarPerfil(ActionEvent event) {
+
+    }
+    
+    @FXML
+    void consultarPerfies(ActionEvent event) {
+
+    }
+
+    @FXML
+    void removerPerfil(ActionEvent event) throws IOException {
+        Stage stage = (Stage) botaoRemover.getScene().getWindow();
         stage.close();
         /*
         FXMLLoader fxmlLoader = new FXMLLoader();
-        fxmlLoader.setLocation(getClass().getResource("FXMLTelaCadastroAluno.fxml"));
-         
+        fxmlLoader.setLocation(getClass().getResource("FXMLTelaRemoverAluno.fxml"));
+        /* 
          * if "fx:controller" is not set in fxml
          * fxmlLoader.setController(NewWindowController);
-         */
-        //FXMLTelaCadastroAlunoController controller = new FXMLTelaCadastroAlunoController();
-        //controller.setUniversidade(universidade);
-        //System.out.println(universidade);
+         
+        FXMLTelaRemoverAlunoController controller = new FXMLTelaRemoverAlunoController();
+        System.out.println(universidade);
+        controller.setUniversidade(universidade);
+        System.out.println(universidade);
         
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("FXMLTelaCadastroAluno.fxml"));
+        */
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("FXMLTelaRemoverAluno.fxml"));
         Parent root = loader.load();
         //System.out.println(universidade);
-        FXMLTelaCadastroAlunoController controller = loader.getController();
+        FXMLTelaRemoverAlunoController controller = loader.getController();
         System.out.println(universidade);
         controller.setUniversidade(universidade);
         System.out.println(universidade);
         
         Scene scene = new Scene(root);
         Stage stage1 = new Stage();
-        stage1.setTitle("Cadastrar perfil");
+        stage1.setTitle("Remover aluno");
         stage1.setScene(scene);
         stage1.show();
     }
- 
+    
     @FXML
     void voltarMenu(ActionEvent event) throws IOException {
         Stage stage = (Stage) botaoVoltar.getScene().getWindow();

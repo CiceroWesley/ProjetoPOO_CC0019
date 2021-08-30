@@ -12,16 +12,17 @@ public class NegocioAluno {
 		int existe = repositorio.existe(discente);
 		if(existe == 0) {
                     repositorio.adicionar(discente);
-                    //System.out.println("AQUIIIII");
+                    System.out.println("AQUIIIII");
 		} else {
                     //lançar exceção ja existe
-                    //System.out.println("ERRO");
+                    System.out.println("ERRO");
 		}
 	}
 	
 	public void remover(String nome) {
 		Aluno dis = repositorio.consultar(nome);
 		if(dis != null) {
+                        System.out.println("negocio");
 			repositorio.remover(dis);
 		} else {
 			//conta nao existe exceção
@@ -29,9 +30,9 @@ public class NegocioAluno {
 	}
 	
 	public void atualizar(Aluno discente,String nome,int matricula, int idade) {
-		int existe = repositorio.existe(discente);
-		if(existe == 1) {
-			repositorio.atualizar(discente, nome, matricula, idade);
+		Aluno dis = repositorio.consultar(discente.getNome());
+		if(dis != null) {
+			repositorio.atualizar(dis, nome, matricula, idade);
 		} else {
 			//conta nao existe exceção
 		}

@@ -19,7 +19,9 @@ public class RepositorioAlunosArrayList implements IRepositorioAlunos {
 
 	@Override
 	public void remover(Aluno discente) {
+                System.out.println("repo antes");
 		array.remove(discente);
+                System.out.println("repo depois");
 	}
 
 	@Override
