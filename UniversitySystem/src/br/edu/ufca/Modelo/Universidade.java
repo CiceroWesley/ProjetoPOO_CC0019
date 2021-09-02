@@ -26,4 +26,9 @@ public class Universidade {
         public void atualizarAluno(String nome1, String nome2, int matricula2, int idade2){
             discentes.atualizar(nome1, nome2, matricula2, idade2);
         }
+        
+        public Aluno consultarAluno(String nome){
+            Aluno discente = discentes.consultar(nome);
+            return discente;
+        }
 }

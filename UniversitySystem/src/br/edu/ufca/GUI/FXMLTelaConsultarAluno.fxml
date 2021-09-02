@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="300.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.edu.ufca.GUI.FXMLTelaConsultarAlunoController">
+    <children>
+      <Text layoutX="130.0" layoutY="26.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sistema Universitario" />
+      <Text layoutX="153.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Consultar aluno" />
+      <Button fx:id="botaoVoltar" layoutX="18.0" layoutY="252.0" onAction="#voltarAluno" text="Voltar" />
+      <Text layoutX="14.0" layoutY="95.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nome:" />
+      <TextField fx:id="insereNome" layoutX="14.0" layoutY="98.0" />
+      <Button fx:id="botaoConsultar" layoutX="174.0" layoutY="252.0" mnemonicParsing="false" onAction="#consultarAluno" text="Consultar" />
+      <Label fx:id="labelNome" layoutX="215.0" layoutY="86.0" prefHeight="39.0" prefWidth="178.0" />
+      <Label fx:id="labelResultadoError" layoutX="19.0" layoutY="207.0" prefHeight="16.0" prefWidth="149.0" />
+      <Label fx:id="labelMatricula" layoutX="215.0" layoutY="131.0" prefHeight="26.0" prefWidth="160.0" />
+      <Label fx:id="labelIdade" layoutX="215.0" layoutY="176.0" prefHeight="26.0" prefWidth="160.0" />
+    </children>
+</AnchorPane>

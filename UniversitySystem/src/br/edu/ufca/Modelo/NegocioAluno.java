@@ -46,5 +46,15 @@ public class NegocioAluno {
 			//aluno nao existe exceção
 		}
 	}
+        
+        public Aluno consultar(String nome){
+            Aluno discente = repositorio.consultar(nome);
+            if(discente != null){
+                return discente;
+            } else{
+                return null;
+                //aluno não existe exceção
+            }
+        }
 	
 }

@@ -41,7 +41,7 @@ public class FXMLTelaProfessorController implements Initializable {
     
     @FXML
     void atualizarPerfil(ActionEvent event) throws IOException {
-        Stage stage = (Stage) botaoRemover.getScene().getWindow();
+        Stage stage = (Stage) botaoAtualizar.getScene().getWindow();
         stage.close();
         
         FXMLLoader loader = new FXMLLoader(getClass().getResource("FXMLTelaAtualizarAluno.fxml"));
@@ -60,8 +60,23 @@ public class FXMLTelaProfessorController implements Initializable {
     }
     
     @FXML
-    void consultarPerfies(ActionEvent event) {
-
+    void consultarPerfies(ActionEvent event) throws IOException {
+        Stage stage = (Stage) botaoConsultar.getScene().getWindow();
+        stage.close();
+        
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("FXMLTelaConsultarAluno.fxml"));
+        Parent root = loader.load();
+        //System.out.println(universidade);
+        FXMLTelaConsultarAlunoController controller = loader.getController();
+        System.out.println(universidade);
+        controller.setUniversidade(universidade);
+        System.out.println(universidade);
+        
+        Scene scene = new Scene(root);
+        Stage stage1 = new Stage();
+        stage1.setTitle("Consultar aluno");
+        stage1.setScene(scene);
+        stage1.show();
     }
 
     @FXML
