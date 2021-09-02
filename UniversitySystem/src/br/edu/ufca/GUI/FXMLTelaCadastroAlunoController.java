@@ -60,23 +60,30 @@ public class FXMLTelaCadastroAlunoController implements Initializable {
     @FXML
     void voltarAluno(ActionEvent event) throws IOException {
         Stage stage = (Stage) botaoVoltar.getScene().getWindow();
-        //stage.close();
+        stage.close();
        
-       
-
-       FXMLLoader fxmlLoader = new FXMLLoader();
-       fxmlLoader.setLocation(getClass().getResource("FXMLTelaAluno.fxml"));
+       FXMLLoader loader = new FXMLLoader(getClass().getResource("FXMLTelaAluno.fxml"));
+       Parent root = loader.load();
+       //System.out.println(universidade);
+       FXMLTelaAlunoController controller = loader.getController();
+       System.out.println(universidade);
+       controller.setUniversidade(universidade);
+       System.out.println(universidade);
+       //FXMLLoader fxmlLoader = new FXMLLoader();
+       //fxmlLoader.setLocation(getClass().getResource("FXMLTelaPrincipal.fxml"));
         /* 
          * if "fx:controller" is not set in fxml
          * fxmlLoader.setController(NewWindowController);
          */
-        Scene scene = new Scene(fxmlLoader.load());
-        //Stage stage = new Stage();
-        stage.setTitle("Sistema Universitario");
-        stage.setScene(scene);
-        stage.show();
-       
-       
+        Scene scene = new Scene(root);
+        Stage stage1 = new Stage();
+        stage1.setTitle("Sistema universitário");
+        stage1.setScene(scene);
+        stage1.show();
+        /* 
+         * if "fx:controller" is not set in fxml
+         * fxmlLoader.setController(NewWindowController);
+         */
        
     }
     public void setUniversidade(Universidade universidade) {

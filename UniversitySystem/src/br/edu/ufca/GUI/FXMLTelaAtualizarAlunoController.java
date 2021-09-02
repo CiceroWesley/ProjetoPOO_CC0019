@@ -24,8 +24,9 @@ import javafx.stage.Stage;
  *
  * @author wesley
  */
-public class FXMLTelaRemoverAlunoController implements Initializable {
+public class FXMLTelaAtualizarAlunoController implements Initializable {
     private Universidade universidade;
+    
     @FXML
     private Button botaoVoltar;
 
@@ -33,17 +34,32 @@ public class FXMLTelaRemoverAlunoController implements Initializable {
     private TextField insereNome;
 
     @FXML
-    private Button botaoRemover;
+    private Button botaoAtualizar;
 
     @FXML
     private Label labelResultado;
 
     @FXML
-    void removerAluno(ActionEvent event) {
-        String nome = insereNome.getText();
-        System.out.println(universidade);
-        this.universidade.removerAluno(nome);
-        labelResultado.setText("Remoção realizada com sucesso");
+    private TextField insereNomeAtualizado;
+
+    @FXML
+    private TextField insereMatriculaAtualizada;
+
+    @FXML
+    private TextField insereIdadeAtualizada;
+
+    @FXML
+    private Label labelResultadoError;
+
+    @FXML
+    void atualizarAluno(ActionEvent event) {
+        String nomeAntigo = insereNome.getText();
+        
+        String nomeNovo = insereNomeAtualizado.getText();
+        int matriculaNova = Integer.parseInt(insereMatriculaAtualizada.getText());
+        int idadeNova = Integer.parseInt(insereIdadeAtualizada.getText());
+        universidade.atualizarAluno(nomeAntigo, nomeNovo, matriculaNova, idadeNova);
+        labelResultado.setText("Aluno atualizado");
     }
 
     @FXML

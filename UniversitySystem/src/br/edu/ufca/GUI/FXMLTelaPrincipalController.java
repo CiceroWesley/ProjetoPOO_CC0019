@@ -47,7 +47,7 @@ public class FXMLTelaPrincipalController implements Initializable {
     
     @FXML
     void abrirTelaProfessor(ActionEvent event) throws IOException {
-        Stage stage = (Stage) botaoAluno.getScene().getWindow();
+        Stage stage = (Stage) botaoProfessor.getScene().getWindow();
         //stage.close();
         
         //FXMLLoader fxmlLoader = new FXMLLoader();

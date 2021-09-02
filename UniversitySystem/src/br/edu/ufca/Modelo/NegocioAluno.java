@@ -29,8 +29,8 @@ public class NegocioAluno {
 		}
 	}
 	
-	public void atualizar(Aluno discente,String nome,int matricula, int idade) {
-		Aluno dis = repositorio.consultar(discente.getNome());
+	public void atualizar(String nome1,String nome,int matricula, int idade) {
+		Aluno dis = repositorio.consultar(nome1);
 		if(dis != null) {
 			repositorio.atualizar(dis, nome, matricula, idade);
 		} else {

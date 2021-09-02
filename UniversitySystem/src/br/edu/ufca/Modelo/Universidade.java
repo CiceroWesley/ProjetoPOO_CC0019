@@ -23,8 +23,7 @@ public class Universidade {
             System.out.println("Univerisda");
             discentes.remover(nome);
         }
-        public void atualizarAluno(String nome1, int matricula1, int idade1, String nome2, int matricula2, int idade2){
-            Aluno dis = new Aluno(nome1,matricula1,idade1);
-            discentes.atualizar(dis, nome2, matricula2, idade2);
+        public void atualizarAluno(String nome1, String nome2, int matricula2, int idade2){
+            discentes.atualizar(nome1, nome2, matricula2, idade2);
         }
 }

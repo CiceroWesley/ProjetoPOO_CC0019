@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="300.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.edu.ufca.GUI.FXMLTelaAtualizarAlunoController">
+    <children>
+      <Text layoutX="130.0" layoutY="26.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sistema Universitario" />
+      <Text layoutX="153.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Atualizar aluno" />
+      <Button fx:id="botaoVoltar" layoutX="18.0" layoutY="252.0" onAction="#voltarAluno" text="Voltar" />
+      <Text layoutX="14.0" layoutY="95.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nome:" />
+      <TextField fx:id="insereNome" layoutX="14.0" layoutY="98.0" />
+      <Button fx:id="botaoAtualizar" layoutX="174.0" layoutY="252.0" mnemonicParsing="false" onAction="#atualizarAluno" text="Atualizar" />
+      <Label fx:id="labelResultado" layoutX="18.0" layoutY="145.0" prefHeight="50.0" prefWidth="139.0" />
+      <Text layoutX="200.0" layoutY="95.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nome atualizado:" />
+      <TextField fx:id="insereNomeAtualizado" layoutX="200.0" layoutY="98.0" />
+      <Text layoutX="200.0" layoutY="147.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Matricula atualizada:" />
+      <TextField fx:id="insereMatriculaAtualizada" layoutX="200.0" layoutY="153.0" />
+      <Text layoutX="200.0" layoutY="199.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Idade atualizada:" />
+      <TextField fx:id="insereIdadeAtualizada" layoutX="200.0" layoutY="202.0" />
+      <Label fx:id="labelResultadoError" layoutX="19.0" layoutY="207.0" prefHeight="16.0" prefWidth="149.0" />
+    </children>
+</AnchorPane>
