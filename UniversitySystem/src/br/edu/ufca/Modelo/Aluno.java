@@ -2,27 +2,17 @@ package br.edu.ufca.Modelo;
 
 //import java.util.ArrayList;
 
-public class Aluno {
-	private String nome;
+public class Aluno extends Pessoa{
 	private int matricula;
-	private int idade;
 	private boolean trancou;
 	//private ArrayList<Disciplina> cadeiras;
 	
 	public Aluno(String nome, int matricula, int idade){
-		this.nome = nome;
+		super(nome,idade);
 		this.matricula = matricula;
-		this.idade = idade;
 		this.trancou = false;
 	}
 
-	public String getNome() {
-		return nome;
-	}
-
-	public void setNome(String nome) {
-		this.nome = nome;
-	}
 
 	public int getMatricula() {
 		return matricula;
@@ -30,14 +20,6 @@ public class Aluno {
 
 	public void setMatricula(int matricula) {
 		this.matricula = matricula;
-	}
-
-	public int getIdade() {
-		return idade;
-	}
-
-	public void setIdade(int idade) {
-		this.idade = idade;
 	}
 
 	public boolean isTrancou() {

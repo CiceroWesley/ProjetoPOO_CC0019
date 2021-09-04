@@ -61,6 +61,10 @@ public class FXMLTelaConsultarAlunoController implements Initializable {
 
         } catch(AlunoNaoExisteException e){
             labelResultadoError.setText(e.getMessage());
+            labelNome.setText(null);
+            labelMatricula.setText(null);
+            labelIdade.setText(null);
+            
         }
         
         

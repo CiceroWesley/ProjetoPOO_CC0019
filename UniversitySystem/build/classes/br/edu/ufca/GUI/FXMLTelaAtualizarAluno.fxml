@@ -14,13 +14,13 @@
       <Text layoutX="14.0" layoutY="95.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nome:" />
       <TextField fx:id="insereNome" layoutX="14.0" layoutY="98.0" />
       <Button fx:id="botaoAtualizar" layoutX="174.0" layoutY="252.0" mnemonicParsing="false" onAction="#atualizarAluno" text="Atualizar" />
-      <Label fx:id="labelResultado" layoutX="18.0" layoutY="145.0" prefHeight="50.0" prefWidth="139.0" />
+      <Label fx:id="labelResultado" layoutX="15.0" layoutY="169.0" prefHeight="50.0" prefWidth="159.0" />
       <Text layoutX="200.0" layoutY="95.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nome atualizado:" />
       <TextField fx:id="insereNomeAtualizado" layoutX="200.0" layoutY="98.0" />
       <Text layoutX="200.0" layoutY="147.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Matricula atualizada:" />
       <TextField fx:id="insereMatriculaAtualizada" layoutX="200.0" layoutY="153.0" />
       <Text layoutX="200.0" layoutY="199.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Idade atualizada:" />
       <TextField fx:id="insereIdadeAtualizada" layoutX="200.0" layoutY="202.0" />
-      <Label fx:id="labelResultadoError" layoutX="19.0" layoutY="207.0" prefHeight="16.0" prefWidth="149.0" />
+      <Label fx:id="labelResultadoError" layoutX="19.0" layoutY="197.0" prefHeight="26.0" prefWidth="171.0" />
     </children>
 </AnchorPane>
