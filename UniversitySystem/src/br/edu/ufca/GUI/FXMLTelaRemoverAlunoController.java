@@ -5,6 +5,7 @@
  */
 package br.edu.ufca.GUI;
 
+import br.edu.ufca.Exceptions.AlunoNaoExisteException;
 import br.edu.ufca.Modelo.Universidade;
 import java.io.IOException;
 import java.net.URL;
@@ -41,9 +42,14 @@ public class FXMLTelaRemoverAlunoController implements Initializable {
     @FXML
     void removerAluno(ActionEvent event) {
         String nome = insereNome.getText();
-        System.out.println(universidade);
-        this.universidade.removerAluno(nome);
-        labelResultado.setText("Remoção realizada com sucesso");
+        //System.out.println(universidade);
+        try{
+           this.universidade.removerAluno(nome);
+           labelResultado.setText("Remoção realizada com sucesso");
+        } catch(AlunoNaoExisteException e){
+            labelResultado.setText(e.getMessage());
+        }
+        
     }
 
     @FXML

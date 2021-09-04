@@ -5,6 +5,7 @@
  */
 package br.edu.ufca.GUI;
 
+import br.edu.ufca.Exceptions.AlunoNaoExisteException;
 import br.edu.ufca.Modelo.Aluno;
 import br.edu.ufca.Modelo.Universidade;
 import java.io.IOException;
@@ -42,13 +43,17 @@ public class FXMLTelaInformacoesAlunoController implements Initializable {
     @FXML
     void verInformacoes(ActionEvent event) {
         String nome = insereNome.getText();
-        Aluno discente = universidade.consultarAluno(nome);
-        if(discente.isTrancou()== false){
-            labelResultado.setText("Curso não trancado");
-        } else{
-            labelResultado.setText("Curso trancado");
-
+        try{
+            Aluno discente = universidade.consultarAluno(nome);
+            if(discente.isTrancou()== false){
+                labelResultado.setText("Curso não trancado");
+            }else{
+                labelResultado.setText("Curso trancado");
+            }
+        } catch(AlunoNaoExisteException e){
+            labelResultado.setText(e.getMessage());
         }
+       
         
     }
 

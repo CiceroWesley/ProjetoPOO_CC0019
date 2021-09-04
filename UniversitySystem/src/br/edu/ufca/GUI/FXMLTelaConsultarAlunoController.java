@@ -5,6 +5,7 @@
  */
 package br.edu.ufca.GUI;
 
+import br.edu.ufca.Exceptions.AlunoNaoExisteException;
 import br.edu.ufca.Modelo.Aluno;
 import br.edu.ufca.Modelo.Universidade;
 import java.io.IOException;
@@ -52,11 +53,17 @@ public class FXMLTelaConsultarAlunoController implements Initializable {
     @FXML
     void consultarAluno(ActionEvent event) {
         String nome = insereNome.getText();
-        Aluno dis = universidade.consultarAluno(nome);
+        try{
+            Aluno dis = universidade.consultarAluno(nome);
+            labelNome.setText("Nome: " + dis.getNome());
+            labelMatricula.setText("Matricula:" + dis.getMatricula());
+            labelIdade.setText("Idade: " + dis.getIdade());
+
+        } catch(AlunoNaoExisteException e){
+            labelResultadoError.setText(e.getMessage());
+        }
         
-        labelNome.setText("Nome: " + dis.getNome());
-        labelMatricula.setText("Matricula:" + dis.getMatricula());
-        labelIdade.setText("Idade: " + dis.getIdade());
+        
         
         //labelresultado erro
         

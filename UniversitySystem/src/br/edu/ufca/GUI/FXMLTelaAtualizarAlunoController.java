@@ -5,6 +5,7 @@
  */
 package br.edu.ufca.GUI;
 
+import br.edu.ufca.Exceptions.AlunoNaoExisteException;
 import br.edu.ufca.Modelo.Universidade;
 import java.io.IOException;
 import java.net.URL;
@@ -58,8 +59,14 @@ public class FXMLTelaAtualizarAlunoController implements Initializable {
         String nomeNovo = insereNomeAtualizado.getText();
         int matriculaNova = Integer.parseInt(insereMatriculaAtualizada.getText());
         int idadeNova = Integer.parseInt(insereIdadeAtualizada.getText());
-        universidade.atualizarAluno(nomeAntigo, nomeNovo, matriculaNova, idadeNova);
-        labelResultado.setText("Aluno atualizado");
+        try{
+            universidade.atualizarAluno(nomeAntigo, nomeNovo, matriculaNova, idadeNova);
+            labelResultado.setText("Aluno atualizado");
+
+        } catch(AlunoNaoExisteException e){
+            labelResultado.setText(e.getMessage());
+        }
+        
     }
 
     @FXML

@@ -5,6 +5,7 @@
  */
 package br.edu.ufca.GUI;
 
+import br.edu.ufca.Exceptions.AlunoJaExisteException;
 import br.edu.ufca.Modelo.Universidade;
 import java.io.IOException;
 import java.net.URL;
@@ -51,10 +52,16 @@ public class FXMLTelaCadastroAlunoController implements Initializable {
         String nome = insereNome.getText();
         int matricula =  Integer.parseInt(insereMatricula.getText());
         int idade = Integer.parseInt(insereIdade.getText());
-        System.out.println(universidade);
-        this.universidade.adicionarAluno(nome,matricula ,idade);
+        
         //System.out.println(universidade);
-        labelResultado.setText("Cadastro realizado com sucesso");
+        try{
+            this.universidade.adicionarAluno(nome,matricula ,idade);
+            labelResultado.setText("Cadastro realizado com sucesso");
+
+        } catch(AlunoJaExisteException e){
+            labelResultado.setText(e.getMessage());;
+        }
+        //System.out.println(universidade);
     }
 
     @FXML
