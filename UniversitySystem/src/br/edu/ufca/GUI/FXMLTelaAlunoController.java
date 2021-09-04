@@ -31,6 +31,12 @@ public class FXMLTelaAlunoController implements Initializable {
 
     @FXML
     private Button botaoVoltar;
+
+    @FXML
+    private Button botaoInformacoes;
+
+    @FXML
+    private Button botaoTrancar;
     
     
     @FXML
@@ -62,7 +68,66 @@ public class FXMLTelaAlunoController implements Initializable {
         stage1.setScene(scene);
         stage1.show();
     }
- 
+  @FXML
+    void trancarCurso(ActionEvent event) throws IOException {
+        Stage stage = (Stage) botaoTrancar.getScene().getWindow();
+        stage.close();
+        /*
+        FXMLLoader fxmlLoader = new FXMLLoader();
+        fxmlLoader.setLocation(getClass().getResource("FXMLTelaCadastroAluno.fxml"));
+         
+         * if "fx:controller" is not set in fxml
+         * fxmlLoader.setController(NewWindowController);
+         */
+        //FXMLTelaCadastroAlunoController controller = new FXMLTelaCadastroAlunoController();
+        //controller.setUniversidade(universidade);
+        //System.out.println(universidade);
+        
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("FXMLTelaTrancarAluno.fxml"));
+        Parent root = loader.load();
+        //System.out.println(universidade);
+        FXMLTelaTrancarAlunoController controller = loader.getController();
+        System.out.println(universidade);
+        controller.setUniversidade(universidade);
+        System.out.println(universidade);
+        
+        Scene scene = new Scene(root);
+        Stage stage1 = new Stage();
+        stage1.setTitle("Trancar curso");
+        stage1.setScene(scene);
+        stage1.show();
+    }
+
+    @FXML
+    void verInformacoes(ActionEvent event) throws IOException {
+        Stage stage = (Stage) botaoInformacoes.getScene().getWindow();
+        stage.close();
+        /*
+        FXMLLoader fxmlLoader = new FXMLLoader();
+        fxmlLoader.setLocation(getClass().getResource("FXMLTelaCadastroAluno.fxml"));
+         
+         * if "fx:controller" is not set in fxml
+         * fxmlLoader.setController(NewWindowController);
+         */
+        //FXMLTelaCadastroAlunoController controller = new FXMLTelaCadastroAlunoController();
+        //controller.setUniversidade(universidade);
+        //System.out.println(universidade);
+        
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("FXMLTelaInformacoesAluno.fxml"));
+        Parent root = loader.load();
+        //System.out.println(universidade);
+        FXMLTelaInformacoesAlunoController controller = loader.getController();
+        System.out.println(universidade);
+        controller.setUniversidade(universidade);
+        System.out.println(universidade);
+        
+        Scene scene = new Scene(root);
+        Stage stage1 = new Stage();
+        stage1.setTitle("Informações");
+        stage1.setScene(scene);
+        stage1.show();
+    }
+    
     @FXML
     void voltarMenu(ActionEvent event) throws IOException {
         Stage stage = (Stage) botaoVoltar.getScene().getWindow();
