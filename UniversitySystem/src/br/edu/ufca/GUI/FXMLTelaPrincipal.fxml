@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
 <AnchorPane id="AnchorPane" prefHeight="300.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.edu.ufca.GUI.FXMLTelaPrincipalController">
@@ -9,5 +13,25 @@
         <Button fx:id="botaoProfessor" layoutX="55.0" layoutY="150.0" onAction="#abrirTelaProfessor" text="Professor" />
       <Button fx:id="botaoAluno" layoutX="290.0" layoutY="150.0" onAction="#abrirTelaAluno" text="Aluno" />
       <Text layoutX="130.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sistema Universitario" />
+      <ImageView layoutX="269.0" layoutY="151.0">
+         <image>
+            <Image url="@img/discente.png" />
+         </image>
+      </ImageView>
+      <ImageView layoutX="31.0" layoutY="151.0">
+         <image>
+            <Image url="@img/docente.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="75.0" fitWidth="55.0" layoutX="28.0" layoutY="16.0">
+         <image>
+            <Image url="@img/ufcabrasao.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="labelHora" layoutX="221.0" layoutY="16.0" prefHeight="16.0" prefWidth="164.0">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Label>
     </children>
 </AnchorPane>

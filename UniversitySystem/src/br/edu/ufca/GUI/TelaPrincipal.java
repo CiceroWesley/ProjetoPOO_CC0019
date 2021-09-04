@@ -7,9 +7,11 @@ package br.edu.ufca.GUI;
 
 import br.edu.ufca.Modelo.Universidade;
 import javafx.application.Application;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Label;
 import javafx.stage.Stage;
 
 /**
@@ -26,6 +28,9 @@ public class TelaPrincipal extends Application {
         this.telacadastroaluno = new FXMLTelaCadastroAlunoController(fachada);
     }
     */
+    
+    
+    
     @Override
     public void start(Stage stage) throws Exception {
         Universidade universidade = new Universidade();

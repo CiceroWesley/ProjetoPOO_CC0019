@@ -6,8 +6,11 @@
 package br.edu.ufca.GUI;
 
 import br.edu.ufca.Modelo.Universidade;
+import java.awt.event.MouseEvent;
 import java.io.IOException;
 import java.net.URL;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -44,6 +47,9 @@ public class FXMLTelaPrincipalController implements Initializable {
 
     @FXML
     private Button botaoAluno;
+    
+    @FXML
+    private Label labelHora;
     
     @FXML
     void abrirTelaProfessor(ActionEvent event) throws IOException {
@@ -93,7 +99,6 @@ public class FXMLTelaPrincipalController implements Initializable {
         stage.setScene(scene);
         stage.show();
     }
-    
     public void setUniversidade(Universidade universidade) {
         this.universidade = universidade;
     }
@@ -101,6 +106,10 @@ public class FXMLTelaPrincipalController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
+        LocalDateTime data = LocalDateTime.now();
+        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+        
+        labelHora.setText("Juazeiro do Norte, "+dtf.format(data));
     }    
     
 }
