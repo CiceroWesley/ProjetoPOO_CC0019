@@ -7,10 +7,10 @@
 <AnchorPane id="AnchorPane" prefHeight="300.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.edu.ufca.GUI.FXMLTelaAlunoController">
     <children>
       <Text layoutX="130.0" layoutY="26.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sistema Universitario" />
-      <Button fx:id="botaoCadastrar" layoutX="14.0" layoutY="124.0" onAction="#cadastrarPerfil" prefHeight="26.0" prefWidth="95.0" text="Cadastrar" />
+      <Button fx:id="botaoCadastrar" layoutX="14.0" layoutY="124.0" onAction="#cadastrarPerfil" prefHeight="26.0" prefWidth="123.0" text="Cadastrar perfil" />
       <Text layoutX="153.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Menu discente" />
-      <Button fx:id="botaoVoltar" layoutX="172.0" layoutY="273.0" onAction="#voltarMenu" text="Voltar" />
-      <Button fx:id="botaoInformacoes" layoutX="130.0" layoutY="124.0" onAction="#verInformacoes" prefHeight="26.0" prefWidth="109.0" text="Informaçoes" />
-      <Button fx:id="botaoTrancar" layoutX="269.0" layoutY="124.0" onAction="#trancarCurso" prefHeight="26.0" prefWidth="95.0" text="Trancar" />
+      <Button fx:id="botaoVoltar" layoutX="171.0" layoutY="267.0" onAction="#voltarMenu" text="Voltar" />
+      <Button fx:id="botaoInformacoes" layoutX="153.0" layoutY="124.0" onAction="#verInformacoes" prefHeight="26.0" prefWidth="109.0" text="Informaçoes" />
+      <Button fx:id="botaoTrancar" layoutX="280.0" layoutY="124.0" onAction="#trancarCurso" prefHeight="26.0" prefWidth="95.0" text="Trancar" />
     </children>
 </AnchorPane>

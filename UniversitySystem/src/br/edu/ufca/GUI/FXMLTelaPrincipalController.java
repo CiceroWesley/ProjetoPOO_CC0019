@@ -31,16 +31,6 @@ import javafx.stage.StageStyle;
 public class FXMLTelaPrincipalController implements Initializable {
     
     private Universidade universidade;
-
-    /*
-    public FXMLTelaPrincipalController(Universidade fachada){
-        this.telacadastroaluno = new FXMLTelaCadastroAlunoController(fachada);
-    }
-    
-    public Universidade getUniversidade(){
-        return universidade;
-    }
-    */
     
      @FXML
     private Button botaoProfessor;
@@ -56,8 +46,6 @@ public class FXMLTelaPrincipalController implements Initializable {
         Stage stage = (Stage) botaoProfessor.getScene().getWindow();
         //stage.close();
         
-        //FXMLLoader fxmlLoader = new FXMLLoader();
-        //fxmlLoader.setLocation(getClass().getResource("FXMLTelaAluno.fxml"));
         /* 
          * if "fx:controller" is not set in fxml
          * fxmlLoader.setController(NewWindowController);

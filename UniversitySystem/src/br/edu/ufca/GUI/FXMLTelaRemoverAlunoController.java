@@ -62,9 +62,9 @@ public class FXMLTelaRemoverAlunoController implements Initializable {
        Parent root = loader.load();
        //System.out.println(universidade);
        FXMLTelaProfessorController controller = loader.getController();
-       System.out.println(universidade);
+       //System.out.println(universidade);
        controller.setUniversidade(universidade);
-       System.out.println(universidade);
+       //System.out.println(universidade);
        //FXMLLoader fxmlLoader = new FXMLLoader();
        //fxmlLoader.setLocation(getClass().getResource("FXMLTelaPrincipal.fxml"));
         /* 

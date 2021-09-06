@@ -19,9 +19,7 @@ public class RepositorioAlunosArrayList implements IRepositorioAlunos {
 
 	@Override
 	public void remover(Aluno discente) {
-                System.out.println("repo antes");
-		array.remove(discente);
-                System.out.println("repo depois");
+		array.remove(discente);           
 	}
 
 	@Override
@@ -41,8 +39,6 @@ public class RepositorioAlunosArrayList implements IRepositorioAlunos {
                 if(discente.getNome().equals(array.get(i).getNome()))
                     indice = 0;
             }
-            
-		//int indice = array.indexOf(discente);
 		if(indice == -1) {
                     //System.out.println("Nao existe");
                     return 0;

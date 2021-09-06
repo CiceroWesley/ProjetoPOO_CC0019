@@ -48,9 +48,9 @@ public class FXMLTelaProfessorController implements Initializable {
         Parent root = loader.load();
         //System.out.println(universidade);
         FXMLTelaAtualizarAlunoController controller = loader.getController();
-        System.out.println(universidade);
+        //System.out.println(universidade);
         controller.setUniversidade(universidade);
-        System.out.println(universidade);
+        //System.out.println(universidade);
         
         Scene scene = new Scene(root);
         Stage stage1 = new Stage();
@@ -68,9 +68,9 @@ public class FXMLTelaProfessorController implements Initializable {
         Parent root = loader.load();
         //System.out.println(universidade);
         FXMLTelaConsultarAlunoController controller = loader.getController();
-        System.out.println(universidade);
+        //System.out.println(universidade);
         controller.setUniversidade(universidade);
-        System.out.println(universidade);
+        //System.out.println(universidade);
         
         Scene scene = new Scene(root);
         Stage stage1 = new Stage();
@@ -83,26 +83,14 @@ public class FXMLTelaProfessorController implements Initializable {
     void removerPerfil(ActionEvent event) throws IOException {
         Stage stage = (Stage) botaoRemover.getScene().getWindow();
         stage.close();
-        /*
-        FXMLLoader fxmlLoader = new FXMLLoader();
-        fxmlLoader.setLocation(getClass().getResource("FXMLTelaRemoverAluno.fxml"));
-        /* 
-         * if "fx:controller" is not set in fxml
-         * fxmlLoader.setController(NewWindowController);
-         
-        FXMLTelaRemoverAlunoController controller = new FXMLTelaRemoverAlunoController();
-        System.out.println(universidade);
-        controller.setUniversidade(universidade);
-        System.out.println(universidade);
         
-        */
         FXMLLoader loader = new FXMLLoader(getClass().getResource("FXMLTelaRemoverAluno.fxml"));
         Parent root = loader.load();
         //System.out.println(universidade);
         FXMLTelaRemoverAlunoController controller = loader.getController();
-        System.out.println(universidade);
+        //System.out.println(universidade);
         controller.setUniversidade(universidade);
-        System.out.println(universidade);
+        //System.out.println(universidade);
         
         Scene scene = new Scene(root);
         Stage stage1 = new Stage();
@@ -115,21 +103,15 @@ public class FXMLTelaProfessorController implements Initializable {
     void voltarMenu(ActionEvent event) throws IOException {
         Stage stage = (Stage) botaoVoltar.getScene().getWindow();
         stage.close();
-       /* setar de volta o controler voltando tambem
-       FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("FXMLTelaPrincipal.fxml"));
-       Parent root1 = (Parent) fxmlLoader.load();
-      // Stage stage = new Stage();
-       stage.setScene(new Scene(root1));
-       stage.show();
-       */
+       
        
        FXMLLoader loader = new FXMLLoader(getClass().getResource("FXMLTelaPrincipal.fxml"));
        Parent root = loader.load();
        //System.out.println(universidade);
        FXMLTelaPrincipalController controller = loader.getController();
-       System.out.println(universidade);
+       //System.out.println(universidade);
        controller.setUniversidade(universidade);
-       System.out.println(universidade);
+       //System.out.println(universidade);
        //FXMLLoader fxmlLoader = new FXMLLoader();
        //fxmlLoader.setLocation(getClass().getResource("FXMLTelaPrincipal.fxml"));
         /* 

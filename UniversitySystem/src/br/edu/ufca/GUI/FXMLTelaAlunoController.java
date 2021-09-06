@@ -43,24 +43,15 @@ public class FXMLTelaAlunoController implements Initializable {
     void cadastrarPerfil(ActionEvent event) throws IOException {
         Stage stage = (Stage) botaoCadastrar.getScene().getWindow();
         stage.close();
-        /*
-        FXMLLoader fxmlLoader = new FXMLLoader();
-        fxmlLoader.setLocation(getClass().getResource("FXMLTelaCadastroAluno.fxml"));
-         
-         * if "fx:controller" is not set in fxml
-         * fxmlLoader.setController(NewWindowController);
-         */
-        //FXMLTelaCadastroAlunoController controller = new FXMLTelaCadastroAlunoController();
-        //controller.setUniversidade(universidade);
-        //System.out.println(universidade);
+        
         
         FXMLLoader loader = new FXMLLoader(getClass().getResource("FXMLTelaCadastroAluno.fxml"));
         Parent root = loader.load();
         //System.out.println(universidade);
         FXMLTelaCadastroAlunoController controller = loader.getController();
-        System.out.println(universidade);
+        //System.out.println(universidade);
         controller.setUniversidade(universidade);
-        System.out.println(universidade);
+        //System.out.println(universidade);
         
         Scene scene = new Scene(root);
         Stage stage1 = new Stage();
@@ -72,24 +63,15 @@ public class FXMLTelaAlunoController implements Initializable {
     void trancarCurso(ActionEvent event) throws IOException {
         Stage stage = (Stage) botaoTrancar.getScene().getWindow();
         stage.close();
-        /*
-        FXMLLoader fxmlLoader = new FXMLLoader();
-        fxmlLoader.setLocation(getClass().getResource("FXMLTelaCadastroAluno.fxml"));
-         
-         * if "fx:controller" is not set in fxml
-         * fxmlLoader.setController(NewWindowController);
-         */
-        //FXMLTelaCadastroAlunoController controller = new FXMLTelaCadastroAlunoController();
-        //controller.setUniversidade(universidade);
-        //System.out.println(universidade);
+        
         
         FXMLLoader loader = new FXMLLoader(getClass().getResource("FXMLTelaTrancarAluno.fxml"));
         Parent root = loader.load();
         //System.out.println(universidade);
         FXMLTelaTrancarAlunoController controller = loader.getController();
-        System.out.println(universidade);
+        //System.out.println(universidade);
         controller.setUniversidade(universidade);
-        System.out.println(universidade);
+        //System.out.println(universidade);
         
         Scene scene = new Scene(root);
         Stage stage1 = new Stage();
@@ -102,24 +84,14 @@ public class FXMLTelaAlunoController implements Initializable {
     void verInformacoes(ActionEvent event) throws IOException {
         Stage stage = (Stage) botaoInformacoes.getScene().getWindow();
         stage.close();
-        /*
-        FXMLLoader fxmlLoader = new FXMLLoader();
-        fxmlLoader.setLocation(getClass().getResource("FXMLTelaCadastroAluno.fxml"));
-         
-         * if "fx:controller" is not set in fxml
-         * fxmlLoader.setController(NewWindowController);
-         */
-        //FXMLTelaCadastroAlunoController controller = new FXMLTelaCadastroAlunoController();
-        //controller.setUniversidade(universidade);
-        //System.out.println(universidade);
         
         FXMLLoader loader = new FXMLLoader(getClass().getResource("FXMLTelaInformacoesAluno.fxml"));
         Parent root = loader.load();
         //System.out.println(universidade);
         FXMLTelaInformacoesAlunoController controller = loader.getController();
-        System.out.println(universidade);
+       // System.out.println(universidade);
         controller.setUniversidade(universidade);
-        System.out.println(universidade);
+        //System.out.println(universidade);
         
         Scene scene = new Scene(root);
         Stage stage1 = new Stage();
@@ -132,23 +104,15 @@ public class FXMLTelaAlunoController implements Initializable {
     void voltarMenu(ActionEvent event) throws IOException {
         Stage stage = (Stage) botaoVoltar.getScene().getWindow();
         stage.close();
-       /* setar de volta o controler voltando tambem
-       FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("FXMLTelaPrincipal.fxml"));
-       Parent root1 = (Parent) fxmlLoader.load();
-      // Stage stage = new Stage();
-       stage.setScene(new Scene(root1));
-       stage.show();
-       */
+       
        
        FXMLLoader loader = new FXMLLoader(getClass().getResource("FXMLTelaPrincipal.fxml"));
        Parent root = loader.load();
        //System.out.println(universidade);
        FXMLTelaPrincipalController controller = loader.getController();
-       System.out.println(universidade);
+       //System.out.println(universidade);
        controller.setUniversidade(universidade);
-       System.out.println(universidade);
-       //FXMLLoader fxmlLoader = new FXMLLoader();
-       //fxmlLoader.setLocation(getClass().getResource("FXMLTelaPrincipal.fxml"));
+       //System.out.println(universidade);
         /* 
          * if "fx:controller" is not set in fxml
          * fxmlLoader.setController(NewWindowController);

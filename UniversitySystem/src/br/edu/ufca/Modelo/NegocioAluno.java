@@ -25,7 +25,7 @@ public class NegocioAluno {
 	public void remover(String nome) throws AlunoNaoExisteException {
 		Aluno dis = repositorio.consultar(nome);
 		if(dis != null) {
-                        System.out.println("negocio");
+                        //System.out.println("negocio");
 			repositorio.remover(dis);
 		} else {
                     throw new AlunoNaoExisteException();

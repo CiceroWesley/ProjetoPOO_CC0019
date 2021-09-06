@@ -23,7 +23,7 @@ public class Universidade {
         }
         
         public void removerAluno(String nome) throws AlunoNaoExisteException{
-            System.out.println("Univerisda");
+            //System.out.println("Univerisda");
             discentes.remover(nome);
         }
         public void atualizarAluno(String nome1, String nome2, int matricula2, int idade2) throws AlunoNaoExisteException{

@@ -47,8 +47,6 @@ public class FXMLTelaCadastroAlunoController implements Initializable {
 
     @FXML
     void cadastrarAluno(ActionEvent event) {
-        //FXMLTelaPrincipalController telaPrincipal = new FXMLTelaPrincipalController();
-        //Universidade universidade = telaPrincipal.getUniversidade();
         String nome = insereNome.getText();
         int matricula =  Integer.parseInt(insereMatricula.getText());
         int idade = Integer.parseInt(insereIdade.getText());
@@ -73,11 +71,9 @@ public class FXMLTelaCadastroAlunoController implements Initializable {
        Parent root = loader.load();
        //System.out.println(universidade);
        FXMLTelaAlunoController controller = loader.getController();
-       System.out.println(universidade);
+       //System.out.println(universidade);
        controller.setUniversidade(universidade);
-       System.out.println(universidade);
-       //FXMLLoader fxmlLoader = new FXMLLoader();
-       //fxmlLoader.setLocation(getClass().getResource("FXMLTelaPrincipal.fxml"));
+       //System.out.println(universidade);
         /* 
          * if "fx:controller" is not set in fxml
          * fxmlLoader.setController(NewWindowController);

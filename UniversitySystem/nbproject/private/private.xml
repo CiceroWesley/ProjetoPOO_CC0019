@@ -4,8 +4,11 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/home/wesley/NetBeansProjects/UniversitySystem/src/br/edu/ufca/GUI/FXMLTelaCadastroAlunoController.java</file>
+            <file>file:/home/wesley/NetBeansProjects/UniversitySystem/src/br/edu/ufca/Modelo/RepositorioAlunosArrayList.java</file>
             <file>file:/home/wesley/NetBeansProjects/UniversitySystem/src/br/edu/ufca/GUI/FXMLTelaPrincipalController.java</file>
+            <file>file:/home/wesley/NetBeansProjects/UniversitySystem/src/br/edu/ufca/Modelo/IRepositorioAlunos.java</file>
             <file>file:/home/wesley/NetBeansProjects/UniversitySystem/src/br/edu/ufca/GUI/FXMLTelaConsultarAlunoController.java</file>
+            <file>file:/home/wesley/NetBeansProjects/UniversitySystem/src/br/edu/ufca/Modelo/NegocioAluno.java</file>
         </group>
     </open-files>
 </project-private>

@@ -66,11 +66,9 @@ public class FXMLTelaInformacoesAlunoController implements Initializable {
        Parent root = loader.load();
        //System.out.println(universidade);
        FXMLTelaAlunoController controller = loader.getController();
-       System.out.println(universidade);
+       //System.out.println(universidade);
        controller.setUniversidade(universidade);
-       System.out.println(universidade);
-       //FXMLLoader fxmlLoader = new FXMLLoader();
-       //fxmlLoader.setLocation(getClass().getResource("FXMLTelaPrincipal.fxml"));
+       //System.out.println(universidade);
         /* 
          * if "fx:controller" is not set in fxml
          * fxmlLoader.setController(NewWindowController);
