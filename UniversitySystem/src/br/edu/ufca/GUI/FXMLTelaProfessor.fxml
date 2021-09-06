@@ -6,11 +6,11 @@
 
 <AnchorPane id="AnchorPane" prefHeight="300.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.edu.ufca.GUI.FXMLTelaProfessorController">
     <children>
-      <Button fx:id="botaoAtualizar" layoutX="115.0" layoutY="124.0" onAction="#atualizarPerfil" text="Atualizar" />
+      <Button fx:id="botaoAtualizar" layoutX="143.0" layoutY="124.0" onAction="#atualizarPerfil" text="Atualizar aluno" />
       <Text layoutX="130.0" layoutY="26.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sistema Universitario" />
       <Text layoutX="153.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Menu docente" />
-      <Button fx:id="botaoRemover" layoutX="14.0" layoutY="124.0" onAction="#removerPerfil" text="Remover " />
-      <Button fx:id="botaoVoltar" layoutX="172.0" layoutY="273.0" onAction="#voltarMenu" text="Voltar" />
-      <Button fx:id="botaoConsultar" layoutX="207.0" layoutY="124.0" onAction="#consultarPerfies" text="Consultar" />
+      <Button fx:id="botaoRemover" layoutX="14.0" layoutY="124.0" onAction="#removerPerfil" text="Remover aluno " />
+      <Button fx:id="botaoVoltar" layoutX="171.0" layoutY="260.0" onAction="#voltarMenu" text="Voltar" />
+      <Button fx:id="botaoConsultar" layoutX="269.0" layoutY="124.0" onAction="#consultarPerfies" text="Consultar aluno" />
     </children>
 </AnchorPane>
